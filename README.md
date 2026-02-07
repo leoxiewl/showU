@@ -31,6 +31,49 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/leoxiewl/showU&project-name=showu&repository-name=showU)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Quick Deploy
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new) from the creators of Next.js.
+
+**Steps:**
+1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
+2. Click the "Deploy with Vercel" button above or visit [Vercel](https://vercel.com/new)
+3. Import your repository
+4. Configure environment variables (optional, see below)
+5. Click "Deploy"
+
+### Environment Variables
+
+This project uses environment variables for configuration. See [.env.example](.env.example) for a template:
+
+```bash
+cp .env.example .env.local
+```
+
+Then edit `.env.local` with your actual values:
+- `NEXT_PUBLIC_APP_NAME` - Application name (default: ShowU)
+- `NEXT_PUBLIC_APP_URL` - Your application URL
+
+### Deployment Configuration
+
+- **Framework**: Next.js 16.1.6 (App Router)
+- **Node Version**: 20.x (automatically detected)
+- **Build Command**: `npm run build`
+- **Output Directory**: `.next` (automatic)
+- **Deploy Regions**: Tokyo (hnd1) & Seoul (icn1) for optimized Asia/China performance
+
+### Technology Stack
+
+- **Framework**: Next.js 16.1.6 with App Router
+- **React**: 19.2.3 with React Compiler
+- **TypeScript**: 5.x
+- **Styling**: Tailwind CSS 4
+- **UI Components**: shadcn/ui
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Theme**: next-themes
+- **Analytics**: Vercel Analytics
+
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
