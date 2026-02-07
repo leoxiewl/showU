@@ -60,7 +60,7 @@ Then edit `.env.local` with your actual values:
 - **Node Version**: 20.x (automatically detected)
 - **Build Command**: `npm run build`
 - **Output Directory**: `.next` (automatic)
-- **Deploy Regions**: Tokyo (hnd1) & Seoul (icn1) for optimized Asia/China performance
+- **Deploy Regions**: Automatic (Vercel's global CDN)
 
 ### Technology Stack
 
