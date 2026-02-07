@@ -3,30 +3,17 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
-import { Home, Briefcase, Video, MessageSquare, Linkedin, Github, Mail, MessageCircle } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import ThemeToggle from './ThemeToggle'
+import { profileConfig, navItems, socialLinks } from '@/data/sidebarConfig'
 
 /**
  * 左侧边栏组件
  * 固定在左侧，包含个人信息和导航
+ * 配置数据请在 @/data/sidebarConfig.ts 中修改
  */
 export default function Sidebar() {
   const pathname = usePathname()
-
-  const navItems = [
-    { label: '主页', href: '/', icon: Home },
-    { label: '个人项目', href: '/portfolio', icon: Briefcase },
-    { label: '视频分享', href: '/about', icon: Video },
-    { label: '欢迎留言', href: '/contact', icon: MessageSquare },
-  ]
-
-  const socialLinks = [
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: MessageCircle, href: 'https://okjike.com', label: '即刻' },
-    { icon: Mail, href: 'mailto:your@email.com', label: 'Email' },
-  ]
 
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/'
@@ -39,7 +26,7 @@ export default function Sidebar() {
         {/* 头像 */}
         <div className="relative w-32 h-32 rounded-full overflow-hidden bg-muted">
           <Image
-            src="/images/profile/avatar.jpg"
+            src={profileConfig.avatar}
             alt="个人头像"
             fill
             className="object-cover"
@@ -49,9 +36,9 @@ export default function Sidebar() {
 
         {/* 名字和简介 */}
         <div className="text-center space-y-2">
-          <h1 className="text-2xl font-bold">月球大叔</h1>
+          <h1 className="text-2xl font-bold">{profileConfig.name}</h1>
           <p className="text-sm text-muted-foreground">
-            AI 创作者，分享 AI 知识与作品
+            {profileConfig.bio}
           </p>
         </div>
 
