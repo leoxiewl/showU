@@ -31,16 +31,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/leoxiewl/showU&project-name=showu&repository-name=showU)
-
-### Quick Deploy
-
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new) from the creators of Next.js.
 
 **Steps:**
+
 1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
-2. Click the "Deploy with Vercel" button above or visit [Vercel](https://vercel.com/new)
-3. Import your repository
+2. Visit [Vercel](https://vercel.com/new) and sign in
+3. Import your repository: `leoxiewl/showU`
 4. Configure environment variables (optional, see below)
 5. Click "Deploy"
 
@@ -53,6 +50,7 @@ cp .env.example .env.local
 ```
 
 Then edit `.env.local` with your actual values:
+
 - `NEXT_PUBLIC_APP_NAME` - Application name (default: ShowU)
 - `NEXT_PUBLIC_APP_URL` - Your application URL
 
