@@ -35,16 +35,21 @@ export const scrollFadeIn: Variants = {
   },
   whileInView: {
     opacity: 1,
-    y: 0
-  },
-  viewport: {
-    once: true,
-    margin: '-100px'
-  },
-  transition: {
-    duration: 0.6,
-    ease: "easeOut"
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
   }
+}
+
+/**
+ * 滚动动画的 viewport 配置
+ * 配合 scrollFadeIn 使用: <motion.div variants={scrollFadeIn} viewport={scrollViewport} />
+ */
+export const scrollViewport = {
+  once: true,
+  margin: '-100px'
 }
 
 /**
